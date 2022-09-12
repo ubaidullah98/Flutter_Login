@@ -16,13 +16,13 @@ class MyApp extends StatelessWidget {
           child: Scaffold(
             appBar: AppBar(
               backgroundColor: Colors.orange,
-              title: Center(
+              title: const Center(
                 child: Text('Login'),
               ),
             ),
             body: SingleChildScrollView(
               child: Column(children: [
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
                     'images/logo.png',
                     width: 60,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Column(
@@ -52,71 +52,86 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                 ]),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
-                Text(
+                const Text(
                   'Login',
                   style: TextStyle(fontFamily: 'Rubik Medium', fontSize: 20),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 10, right: 10),
+                  padding: const EdgeInsets.only(left: 10, right: 10),
                   child: TextFormField(
                     decoration: InputDecoration(
-                      fillColor: Color(0xffF8F9FA),
+                      fillColor: const Color(0xffF8F9FA),
                       filled: true,
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.email_outlined,
                         color: Colors.black,
                       ),
                       hintText: 'Email',
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xffE4E7EB)),
+                        borderSide: const BorderSide(color: Color(0xffE4E7EB)),
                         borderRadius: BorderRadius.circular(15.0),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xffE4E7EB)),
+                        borderSide: const BorderSide(color: Color(0xffE4E7EB)),
                         borderRadius: BorderRadius.circular(15.0),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 10, right: 10),
+                  padding: const EdgeInsets.only(left: 10, right: 10),
                   child: TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
-                      fillColor: Color(0xffF8F9FA),
+                      fillColor: const Color(0xffF8F9FA),
                       filled: true,
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.lock_open,
+                        color: Colors.black,
+                      ),
+                      suffixIcon: const Icon(
+                        Icons.visibility_off,
                         color: Colors.black,
                       ),
                       hintText: 'Password',
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xffE4E7EB)),
+                        borderSide: const BorderSide(color: Color(0xffE4E7EB)),
                         borderRadius: BorderRadius.circular(15.0),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xffE4E7EB)),
+                        borderSide: const BorderSide(color: Color(0xffE4E7EB)),
                         borderRadius: BorderRadius.circular(15.0),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(
+                const Text(
+                  'Forgot Password?',
+                  style: TextStyle(
+                    decoration: TextDecoration.underline,
+                  ),
+                  textAlign: TextAlign.right,
+                ),
+                const SizedBox(
                   height: 40,
                 ),
                 Container(
                   height: 50,
                   width: 300,
-                  child: Center(
+                  decoration: BoxDecoration(
+                    color: Colors.orange,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Center(
                     child: Text(
                       'Login',
                       style: TextStyle(
@@ -125,17 +140,13 @@ class MyApp extends StatelessWidget {
                           fontFamily: 'Rubik Regular'),
                     ),
                   ),
-                  decoration: BoxDecoration(
-                    color: Colors.orange,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       "Don't have an account?",
                       style:
